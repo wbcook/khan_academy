@@ -1,8 +1,8 @@
 /**
-Loans:
-[ID, PROJECT, FUNDS, GOAL, EXP]
-(1, "wheels", 550, 1000, 25)
-**/
+ * Loans:
+ * [ID, PROJECT, FUNDS, GOAL, EXP]
+ * (1, "wheels", 550, 1000, 25)
+ * **/
 
 CREATE TABLE loans (id INTEGER PRIMARY KEY, project TEXT, funds INTEGER, goal INTEGER, expire INTEGER);
 
@@ -27,3 +27,7 @@ SELECT * FROM loans;
 SELECT project, expire FROM loans ORDER BY expire;
 
 SELECT SUM(funds), SUM(goal) FROM loans
+
+/**
+ * Our implementation of SQL is based off of SQLite which is compiled down to asm.js by Emscripten packaged into sqljs.
+ * **/
